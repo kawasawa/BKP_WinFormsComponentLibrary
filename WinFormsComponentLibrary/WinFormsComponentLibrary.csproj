@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8F7DE0F-0C27-4CF1-AFAA-3056099369E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCL</RootNamespace>
+    <AssemblyName>WinFormsComponentLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\WinFormsComponentLibrary.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\WinFormsComponentLibrary.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DebugHelper.cs" />
+    <Compile Include="Common\EncrptionService.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Consts.cs" />
+    <Compile Include="Views\Controls\WCL_DisabledFocusButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_CheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_FunctionButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_FunctionButtonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_FunctionButtonPanel.Designer.cs">
+      <DependentUpon>WCL_FunctionButtonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_NumericComborBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_NumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_RadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_RadioButtonGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_StringComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\_enums\FormatTextEditRoleKind.cs" />
+    <Compile Include="Views\Controls\_enums\FunctionButtonRoleKind.cs" />
+    <Compile Include="Views\Controls\_enums\StringTextEditRoleKind.cs" />
+    <Compile Include="Views\Controls\_extensions\ControlExtensions.cs" />
+    <Compile Include="Views\Controls\_extensions\FormatTextControlExtensions.cs" />
+    <Compile Include="Views\Controls\_interfaces\IDesignControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\INunericTextControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IFormatTextControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IPermitEmptyControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\ITextControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IStringTextControl.cs" />
+    <Compile Include="Views\Controls\WCL_NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_StringTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\_extensions\StringTextControlExtensions.cs" />
+    <Compile Include="Views\Controls\WCL_FormatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Extensions.cs" />
+    <Compile Include="Views\Forms\WCL_FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\WCL_BasicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\WCL_BasicForm.Designer.cs">
+      <DependentUpon>WCL_BasicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\WCL_ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\WCL_ProgressDialog.Designer.cs">
+      <DependentUpon>WCL_ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_enums\MessageDetailKind.cs" />
+    <Compile Include="Views\_enums\ControlStatusKind.cs" />
+    <Compile Include="Views\_enums\MessageKind.cs" />
+    <Compile Include="Views\Controls\_extensions\NumericTextControlExtensions.cs" />
+    <Compile Include="Views\Controls\_interfaces\IDetectChangesControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IEditControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IPermitReadOnlyControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IValidateMandatoryControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IValidateValueControl.cs" />
+    <Compile Include="Views\Controls\_interfaces\IWCLControl.cs" />
+    <Compile Include="Views\Controls\WCL_ComboBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\WCL_TextBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dependencies.cs" />
+    <Compile Include="Views\Utils.cs" />
+    <Compile Include="Win32\Delegate.cs" />
+    <Compile Include="Win32\Gdi32.cs" />
+    <Compile Include="Win32\Imm32.cs" />
+    <Compile Include="Win32\Karnel32.cs" />
+    <Compile Include="Win32\Shell32.cs" />
+    <Compile Include="Win32\User32.cs" />
+    <Compile Include="Win32\_constants\FileInfoFlags.cs" />
+    <Compile Include="Win32\_constants\ShowWindowCommands.cs" />
+    <Compile Include="Win32\_constants\SHSTOCKICONID.cs" />
+    <Compile Include="Win32\_constants\SystemCommands.cs" />
+    <Compile Include="Win32\_constants\VirtualKeys.cs" />
+    <Compile Include="Win32\_constants\WindowLongFlags.cs" />
+    <Compile Include="Win32\_constants\WindowMessages.cs" />
+    <Compile Include="Win32\_constants\WindowStyles.cs" />
+    <Compile Include="Win32\_constants\WindowStylesEx.cs" />
+    <Compile Include="Win32\_eventArgs\Win32EventArgs.cs" />
+    <Compile Include="Win32\_structures\COMBOBOXINFO.cs" />
+    <Compile Include="Win32\_structures\COPYDATASTRUCT.cs" />
+    <Compile Include="Win32\_structures\MENUITEMINFO.cs" />
+    <Compile Include="Win32\_structures\POINT.cs" />
+    <Compile Include="Win32\_structures\RECT.cs" />
+    <Compile Include="Win32\_structures\SHSTOCKICONINFO.cs" />
+    <Compile Include="Win32\_structures\WINDOWPLACEMENT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AddFile.png" />
+    <Content Include="Resources\AddFolder.png" />
+    <Content Include="Resources\AddRow.png" />
+    <Content Include="Resources\Close.png" />
+    <Content Include="Resources\Cloud.png" />
+    <Content Include="Resources\Connect.png" />
+    <Content Include="Resources\CopyFile.png" />
+    <Content Include="Resources\Database.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\DeleteFile.png" />
+    <Content Include="Resources\DeleteFolder.png" />
+    <Content Include="Resources\DeleteRow.png" />
+    <Content Include="Resources\Detail.png" />
+    <Content Include="Resources\Eraser.png" />
+    <Content Include="Resources\Event.png" />
+    <Content Include="Resources\Excel.png" />
+    <Content Include="Resources\Filter.png" />
+    <Content Include="Resources\Flag.png" />
+    <Content Include="Resources\Form.png" />
+    <Content Include="Resources\History.png" />
+    <Content Include="Resources\InsertRow.png" />
+    <Content Include="Resources\LinkForm.png" />
+    <Content Include="Resources\Login.png" />
+    <Content Include="Resources\Logout.png" />
+    <Content Include="Resources\Mail.png" />
+    <Content Include="Resources\NewFile.png" />
+    <Content Include="Resources\NewFolder.png" />
+    <Content Include="Resources\PrentPreview.png" />
+    <Content Include="Resources\Print.png" />
+    <Content Include="Resources\Redo.png" />
+    <Content Include="Resources\Reference.png" />
+    <Content Include="Resources\Refresh.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\SaveAll.png" />
+    <Content Include="Resources\Search.png" />
+    <Content Include="Resources\Select.png" />
+    <Content Include="Resources\SendMail.png" />
+    <Content Include="Resources\Settings.png" />
+    <Content Include="Resources\StatusAlert.png" />
+    <Content Include="Resources\StatusBlock.png" />
+    <Content Include="Resources\StatusError.png" />
+    <Content Include="Resources\StatusHelp.png" />
+    <Content Include="Resources\StatusInformation.png" />
+    <Content Include="Resources\StatusNo.png" />
+    <Content Include="Resources\StatusOk.png" />
+    <Content Include="Resources\StatusPause.png" />
+    <Content Include="Resources\StatusRun.png" />
+    <Content Include="Resources\StatusStop.png" />
+    <Content Include="Resources\StatusWarning.png" />
+    <Content Include="Resources\Store.png" />
+    <Content Include="Resources\Synchronize.png" />
+    <Content Include="Resources\Undo.png" />
+    <Content Include="Resources\User.png" />
+    <Content Include="Resources\UserGuide.png" />
+    <Content Include="Resources\UserPermission.png" />
+    <Content Include="Resources\UserVoice.png" />
+    <Content Include="Resources\Web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\WCL_FunctionButtonPanel.resx">
+      <DependentUpon>WCL_FunctionButtonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\WCL_BasicForm.resx">
+      <DependentUpon>WCL_BasicForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
